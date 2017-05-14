@@ -1,21 +1,33 @@
 package Honda;
-
+import java.util.Scanner;
 public class Main {
+
     public static void main(String[] args) {
 
-        Square blueSquare=new Square(2);
-        System.out.println("1 Square perimeter = "+blueSquare.perimeter());
+        Scanner scanner= new Scanner(System.in);
+
+        //square perimeter i/o
+        System.out.print("Square side = ");
+        int sqrSideLength = scanner.nextInt();
+        Square blueSquare = new Square(sqrSideLength);
+        System.out.println("Square perimeter = "+blueSquare.perimeter()+"\n");
+
+        //circle length i/o
+        System.out.print("Circle diameter = ");
+        int circleDiameter =scanner.nextInt();
+        Circle redCircle = new Circle(circleDiameter);
+        System.out.println("Circle length = "+redCircle.perimeter()+"\n");
+
+        //triangle perimeter i/o
+        System.out.print("Triangle sides (ex. 1 2 3) = ");
+        int triangleSide1 = scanner.nextInt();
+        int triangleSide2 = scanner.nextInt();
+        int triangleSide3 = scanner.nextInt();
+        Triangle greenTriangle = new Triangle(triangleSide1, triangleSide2, triangleSide3);
+        System.out.println("Triangle perimeter = "+greenTriangle.perimeter()+"\n");
 
 
-        Circle redCircle = new Circle(20);
-        System.out.println("2 Circle lengh = "+redCircle.perimeter());
-
-        Triangle greenTriangle = new Triangle(4,5,6);
-        System.out.println("3 Triangle perimeter = "+greenTriangle.perimeter());
-
-
-        System.out.println(GeoFigure.q);
-
+        System.out.println("Figures = " + GeoFigure.q);
 
     }
 }

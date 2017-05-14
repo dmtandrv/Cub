@@ -11,7 +11,7 @@ public class Square extends GeoFigure{
     }
 
     int perimeter(){
-        return sideOne*sideOne;
+        return sideOne*4;
     }
 
 }
