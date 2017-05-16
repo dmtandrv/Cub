@@ -1,6 +1,6 @@
 package Honda;
 import java.util.Scanner;
-public class Main {
+public class GeoMain {
 
     public static void main(String[] args) {
 
