@@ -7,7 +7,7 @@ import java.util.Random;
  */
 public class FileWorks {
     public static void main(String[] args) throws IOException {
-        //todo un. project folder
+        //todo un. project folder ex. System.getProperty("user.dir")
         FileWriter rndWriter = new FileWriter("/home/darts/IdeaProjects/Cub/rndFile", false);
         int rnd;
         Random random= new Random();
@@ -16,6 +16,7 @@ public class FileWorks {
             rndWriter.append(String.valueOf(rnd)+'\n');
             rndWriter.flush();
         }
+
 
 
         //todo un. project folder
