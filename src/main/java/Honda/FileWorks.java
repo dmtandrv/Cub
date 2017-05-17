@@ -7,8 +7,7 @@ import java.util.Random;
  */
 public class FileWorks {
     public static void main(String[] args) throws IOException {
-        //todo un. project folder ex. System.getProperty("user.dir")
-        FileWriter rndWriter = new FileWriter("/home/darts/IdeaProjects/Cub/rndFile", false);
+        FileWriter rndWriter = new FileWriter(System.getProperty("user.dir")+"/rndFile", false);
         int rnd;
         Random random= new Random();
         for (int i=0; i<100; i++) {
@@ -16,12 +15,6 @@ public class FileWorks {
             rndWriter.append(String.valueOf(rnd)+'\n');
             rndWriter.flush();
         }
-
-
-
-        //todo un. project folder
-        FileWriter sortedWriter = new FileWriter("/home/darts/IdeaProjects/Cub/sortedFile", false);
-
-
+        FileWriter sortedWriter = new FileWriter(System.getProperty("user.dir")+"/sortedFile", false);
     }
 }
